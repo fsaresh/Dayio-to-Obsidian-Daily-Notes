@@ -49,5 +49,5 @@ Thumbs.db
 *.wmv
 
 # Output
-daylio_export*
+daylio_export*.csv
 sentence diary/
