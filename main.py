@@ -1,7 +1,7 @@
 from migrater import DaylioMigration
 
 
-CSV_LOCATION = "./daylio_export_2023_07_28.csv"
+CSV_LOCATION = "./daylio_exports/sample_daylio.csv"
 
 
 if __name__ == '__main__':
