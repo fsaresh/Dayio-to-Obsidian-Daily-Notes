@@ -23,7 +23,7 @@ class DaylioMigrationEntry:
     def file_folder(self):
         entry_date_parts = self.row_data[DaylioEntryKeys.FULL_DATE].split('-')
         entry_date_month_expanded = f"{entry_date_parts[1]}-{calendar.month_name[int(entry_date_parts[1])]}"
-        return f"{MIGRATED_ENTRY_LOCATION}/{entry_date_parts[0]}/{entry_date_month_expanded}"
+        return os.path.join(MIGRATED_ENTRY_LOCATION, f"{entry_date_parts[0]}/{entry_date_month_expanded}")
 
     @property
     def file_name(self):
@@ -32,7 +32,7 @@ class DaylioMigrationEntry:
     def write_to_file(self):
         if not os.path.exists(self.file_folder):
             os.makedirs(self.file_folder)
-        with open(f'{self.file_folder}/{self.file_name}', 'w') as migrated_file:
+        with open(os.path.join(self.file_folder, self.file_name), 'w') as migrated_file:
             migrated_file.write(self.contents)
 
 

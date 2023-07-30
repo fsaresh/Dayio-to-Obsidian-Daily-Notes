@@ -1,6 +1,10 @@
-CSV_LOCATION = "./daylio_exports/sample_daylio.csv"  # Change this to your real backup file!
-SAMPLE_CSV_LOCATION = "./daylio_exports/sample_daylio.csv"
-MIGRATED_ENTRY_LOCATION = "./sentence diary"
+import os.path
+
+DAYLIO_EXPORTS_LOCATION = os.path.relpath("./daylio_exports/")
+CSV_NAME = "sample_daylio.csv"  # Change this to your real backup file!
+CSV_LOCATION = os.path.join(DAYLIO_EXPORTS_LOCATION, CSV_NAME)
+MIGRATED_ENTRY_LOCATION = os.path.relpath("./sentence diary")
+
 UTF_ENCODING = 'utf-8-sig'
 
 
