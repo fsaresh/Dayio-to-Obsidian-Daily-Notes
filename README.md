@@ -11,6 +11,10 @@ As a result of using Obsidian as a second brain software, I wanted all my old se
 # Daylio to Obsidian
 I keep a pretty specific structure in Obsidian (e.g. today's note would be `sentence diary/2023/07-July/2023-07-29-Saturday.md`), so I wanted a way to programmatically create those directories with month names and file names with day of the week as well.
 
-This script migrates all of my entries from Daylio (exported to a CSV with date, weekday, mood, activities, and a full note) to my sentence diary format with a summary, mood and activities, and tasks today section. I could extend this a little farther out and format it nicer, but I really just wanted to have the important part (the note body) under the summary for my migration to Obsidian.
+This script migrated all of my entries from Daylio (exported to a CSV with date, weekday, mood, activities, and a full note) to my sentence diary format with a summary, mood and activities, and tasks today section. I could extend this a little farther out and format it nicer, but I really just wanted to have the important part (the note body) under the summary for my migration to Obsidian.
 
 # Usage
+1. Place your Daylio CSV backup file in the `daylio_exports folder`
+2. Replace the `CSV_NAME` variable in `migration_constants.py`
+3. Navigate to the project root and run the Python program from `main.py` via `python main.py`
+4. Copy the output from the `sentence_diary` folder into your Obsidian vault! Note that the output will be in structure `YYYY/MM-MMMM/YYYY-MM-DD-dddd.md`

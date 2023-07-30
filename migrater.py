@@ -33,6 +33,7 @@ class DaylioMigrationEntry:
         if not os.path.exists(self.file_folder):
             os.makedirs(self.file_folder)
         with open(os.path.join(self.file_folder, self.file_name), 'w') as migrated_file:
+            print(f"Writing contents to `{migrated_file.name}`")
             migrated_file.write(self.contents)
 
 
