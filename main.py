@@ -1,11 +1,7 @@
-from migrater import DaylioMigration
-
-
-CSV_LOCATION = "./daylio_exports/sample_daylio.csv"
+from migrater import DaylioMigrater
+from migration_constants import CSV_LOCATION
 
 
 if __name__ == '__main__':
-    daylio_migrater = DaylioMigration()
-    daylio_migrater.migrate(CSV_LOCATION)
-
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+    daylio_migrater = DaylioMigrater(CSV_LOCATION)
+    daylio_migrater.migrate()
