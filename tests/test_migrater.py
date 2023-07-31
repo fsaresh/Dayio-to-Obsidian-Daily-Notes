@@ -1,4 +1,3 @@
-import builtins
 import os.path
 import unittest
 from migrater import DaylioMigrater, DaylioMigrationEntry

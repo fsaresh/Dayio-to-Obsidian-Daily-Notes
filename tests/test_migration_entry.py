@@ -1,6 +1,6 @@
 import unittest
 from migrater import DaylioMigrationEntry
-from migration_constants import MIGRATED_ENTRY_LOCATION
+from migration_constants import FileLocationSettings
 
 
 class MigrationEntryTestCase(unittest.TestCase):
@@ -42,7 +42,9 @@ class MigrationEntryTestCase(unittest.TestCase):
         self.assertEqual(expected_contents, actual_contents)
 
     def test_file_folder(self):
-        expected_file_folder = f"{MIGRATED_ENTRY_LOCATION}/{self.year}/{self.month_number}-{self.month_name}"
+        expected_file_folder = f"{FileLocationSettings.MIGRATED_ENTRY_LOCATION}/" \
+                               f"{self.year}/" \
+                               f"{self.month_number}-{self.month_name}"
         actual_file_folder = self.migration_entry.file_folder
         self.assertEqual(expected_file_folder, actual_file_folder)
 
